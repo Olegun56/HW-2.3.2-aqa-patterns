@@ -21,7 +21,7 @@ public class LoginPageTest {
         $("[data-test-id=login] input").setValue(user.getLogin());
         $("[data-test-id=password] input").setValue(user.getPassword());
         $("[data-test-id=action-login]").click();
-        $(".App_appContainer__3jRx").shouldBe(visible).shouldHave(text("Личный кабинет"));
+        $(".App_appContainer__3jRx1").shouldBe(visible).shouldHave(text("Личный кабинет"));
 
 
     }
@@ -32,7 +32,7 @@ public class LoginPageTest {
         $("[data-test-id=login] input").setValue(user.getLogin());
         $("[data-test-id=password] input").setValue(user.getPassword());
         $(".button__content").click();
-        $("[data-test-id=error-notification] .notification__content").shouldHave(Condition.exactText("Ошибка! " + "Пользовател заблокирован"));
+        $("[data-test-id=error-notification] .notification__content").shouldHave(Condition.exactText("Ошибка! " + "Пользователь заблокирован"));
 
     }
 
@@ -42,7 +42,7 @@ public class LoginPageTest {
         $("[data-test-id=login] input").setValue(user.getLogin());
         $("[data-test-id=password] input").setValue(user.getPassword());
         $(".button__content").click();
-        $("[data-test-id=error-notification] .notification__content").shouldHave(Condition.exactText("Ошибка! " + "Неверн указан логин или пароль"));
+        $("[data-test-id=error-notification] .notification__content").shouldHave(Condition.exactText("Ошибка! " + "Неверно указан логин или пароль"));
 
     }
     @Test
@@ -51,6 +51,6 @@ public class LoginPageTest {
         $("[data-test-id=login] input").setValue(user.getLogin());
         $("[data-test-id=password] input").setValue(user.getPassword());
         $(".button__content").click();
-        $("[data-test-id=error-notification] .notification__content").shouldHave(Condition.exactText("Ошибка! " + "Неверн указан логин или пароль"));
+        $("[data-test-id=error-notification] .notification__content").shouldHave(Condition.exactText("Ошибка! " + "Неверно указан логин или пароль"));
     }
 }
